@@ -93,12 +93,13 @@ h1{
 
 /*Serviços*/
 .services-container{
+    width: 100%;
     padding: 5rem 0;
 }
 
 .services-container ul{
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -106,7 +107,7 @@ h1{
     flex: 1 1 200px;
     list-style: none;
     text-align: center;
-    padding: 20px;
+    margin: 10px;
 }
 
 .fas{
@@ -189,8 +190,8 @@ h1{
     text-align: center;
     line-height: 120px;
     margin-bottom: -50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 25%;
+    margin-right: 25%;
     font-size: 18px;
     position: relative;
 }
@@ -324,6 +325,8 @@ footer p{
 @media (max-width: 1100px){
     .plans-container{
         width: 95%;
+        display: flex;
+        flex-direction: row;
     }
 
     .plan{
@@ -331,8 +334,21 @@ footer p{
     }
 }
 
+
 /* tablet 900px */
 @media (max-width: 900px){
+
+    /*html,
+    body{
+        overflow-x: hidden;
+    }*/
+
+    .plans-container{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .p-banner{
         padding: 0 5rem;
     }
@@ -352,19 +368,39 @@ footer p{
     .searchdomain-container{
         padding: 5rem 3rem;
     }
+
+    .contact-container input,
+    .contact-container textarea{
+        width: 95%;
+        margin: 10px auto;
+    }
     
+    .services-container{
+        width: 90%;
+        
+    }
+    .services-container ul{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .navbar-items li{
+        font-size: 12px;
+        margin-left: 10px;
+    }
 }
 
 /* mobile 576px */
 @media (max-wididth: 576px){
-
     .plans-container{
+        max-width: 100%;
+        display: flex;
         flex-direction: column;
-        width: 100%;
     }
 
     .plan{
         width: 100%;
         max-width: 100%;
     }
+
 }
